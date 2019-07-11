@@ -95,6 +95,17 @@ ul.topnav li.dropdownIcon {
     display: none;
 }
 
+button {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #0069ff;
+    padding: 15px 60px;
+    border-radius: 7px;
+    display: block;
+    margin: 5px;
+    text-align: center;
+}
 
 /*################### Custom Styles ###########################*/
 
@@ -139,25 +150,6 @@ div.rightside-col {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 2px 3px 0 rgba(0,0,0,.1);    
 }
 
-div.image-slope img {
-    display: block;
-    margin: auto;
-    box-shadow: -2px -2px 20px 2px rgba(0,0,0,0.15), 2px 2px 17px 2px rgba(0,0,0,1);
-    
-}
-
-button {
-    font-size: 32px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #0069ff;
-    padding: 15px 60px;
-    border-radius: 7px;
-    display: block;
-    margin: 5px;
-    text-align: center;
-}
-
 .button-learnmore {
     display: block;
     margin: auto;
@@ -166,6 +158,13 @@ button {
 article p {
     font-size: 35px;
     padding: 20px;
+}
+
+div.image-slope img {
+    display: block;
+    margin: auto;
+    box-shadow: -2px -2px 20px 2px rgba(0,0,0,0.15), 2px 2px 17px 2px rgba(0,0,0,1);
+    
 }
 
 footer.footsy {
@@ -191,7 +190,7 @@ footer.footsy ul li {
 
 /*####################### Mobile Settings #######################3*/
 
-@media screen and (max-width : 680px) {
+@media only screen and (max-width : 680px) {
     ul.topnav li:not(:nth-child(1)) {
         display: none;
     }

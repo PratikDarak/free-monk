@@ -86,11 +86,11 @@ img.headshot {
     justify-content: center;
 }
 
-.icon-left, .blurb-wrapper-right {
+.icon-left, .blurb-wrapper-left {
     order: 1;
 }
 
-.icon-right, blurb-wrapper-left {
+.icon-right, .blurb-wrapper-right {
     order: 2;
 }
 
