@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid header">
     <div class="row">
         <div class="col-6">
-            <label>Employee Age</label>
+            <h5><strong>Employee Age</strong></h5>
             <br>
             <div class="list-group list-group-horizontal">
                 <a class="list-group-item list-group-item-action" (click)="onFilterSelect(1)">{{ this.employeeService.counter1 }}<br>Below 20yrs</a>
@@ -12,8 +12,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <p class="filer-class" *ngIf="lastFilter" (click)="onFilterSelect(0)">{{ filterString[lastFilter-1] }}<span>&times;</span></p>
+        <div class="col-2">
+            <p class="filter-class" *ngIf="lastFilter" (click)="onFilterSelect(0)">{{ filterString[lastFilter-1] }}</p>
         </div>
     </div>
 </div>
