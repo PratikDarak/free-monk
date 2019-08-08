@@ -1,6 +1,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
+            <p class="filer-class" *ngIf="">{{ filterString[filterSelected-1] }}<span>&times;</span></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
             <div class="emp-table">
                     <table class="table table-striped">
                         <thead>
@@ -13,7 +18,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let emp of employees | paginate:{ itemsPerPage:selectedOption, currentPage:page }; let i = index">
+                            <tr *ngFor="let emp of employees | filter:filterSelected | paginate:{ itemsPerPage:selectedOption, currentPage:page }; let i = index">
                                 <th scope="row">{{ emp.empID }}</th>
                                 <td><span><img class="empImage" src="{{ emp.empImage }}"></span>{{ emp.empName }}</td>
                                 <td>{{ emp.empDescription }}</td>

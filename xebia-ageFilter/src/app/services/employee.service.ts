@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 import { Employee } from './employee.model';
 
@@ -8,6 +8,7 @@ import { Employee } from './employee.model';
 export class EmployeeService {
     private employees: Employee[] = [];
     private _url : string = "/assets/data/employees.json";
+    filterSelected = new Subject<number>();
     counter1: number = 0;
     counter2: number = 0;
     counter3: number = 0;
