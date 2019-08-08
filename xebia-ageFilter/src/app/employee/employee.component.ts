@@ -12,7 +12,6 @@ export class EmployeeComponent implements OnInit {
   page: number = 1;
   selectedOption: number = 10;
   filterSelected: number = 0;
-  filterString: string[] = ["Below 20yrs","20 to 40yrs","40 to 60yrs","Above 60yrs"];
   ageSorted: boolean = false;
 
   constructor(private employeeService: EmployeeService) {}

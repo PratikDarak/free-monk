@@ -4,11 +4,16 @@
             <label>Employee Age</label>
             <br>
             <div class="list-group list-group-horizontal">
-                <a class="list-group-item list-group-item-action" (click)="onFilterSelect(1)">{{ counter1 | async }}<br>Below 20yrs</a>
+                <a class="list-group-item list-group-item-action" (click)="onFilterSelect(1)">{{ this.employeeService.counter1 }}<br>Below 20yrs</a>
                 <a class="list-group-item list-group-item-action" (click)="onFilterSelect(2)">{{ this.employeeService.counter2 }}<br>20 to 40yrs</a>
                 <a class="list-group-item list-group-item-action" (click)="onFilterSelect(3)">{{ this.employeeService.counter3 }}<br>40 to 60yrs</a>
                 <a class="list-group-item list-group-item-action" (click)="onFilterSelect(4)">{{ this.employeeService.counter4 }}<br>Above 60yrs</a>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="filer-class" *ngIf="lastFilter" (click)="onFilterSelect(0)">{{ filterString[lastFilter-1] }}<span>&times;</span></p>
         </div>
     </div>
 </div>

@@ -7,11 +7,20 @@ import { EmployeeService } from '../services/employee.service';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
+  lastFilter: number;
+  filterString: string[] = ["Below 20yrs","20 to 40yrs","40 to 60yrs","Above 60yrs"];
+
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {}
 
   onFilterSelect(i: number) {
-    this.employeeService.filterSelected.next(i);
+    if(this.lastFilter === i) {
+      this.employeeService.filterSelected.next(0);
+      this.lastFilter = 0;
+    } else {
+      this.employeeService.filterSelected.next(i);
+      this.lastFilter = i;
+    }
   }
 }
