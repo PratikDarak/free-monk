@@ -4,6 +4,19 @@ Detailed Instructions on how to run the website:-
 3. Run "npm i" command to install the dependencies
 4. Run "ng serve --open" to run the website
 
+This website does the following things:
+1. Gets the data asynchronously from the locally mocked JSON file.
+2. In the header component, it displays the count of employees within each Age bucket.
+3. Upon clicking on each filter toggle, the data in the below table is modified according to the Age bucket selected.
+4. In the employee component, first it diaplys the filter if it has been selected by the end user otherwise it remains hidden.
+5. The selected filter also gives us the option to clear it by clicking on the 'X' icon.
+6. Employee table will continue to display us the relevant data as per the choices.
+7. The table also provides us with an option to sort the data by "Age" and/or "ID".
+8. In the footer template, we have an option to select the pages we want to see.
+9. We can also select how many rows we want to display on a single page.
+
+Also, more employee data can be directly added to the "employees.json" file in the "assests/data" folder to further the testing.
+
 Thank you!
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------

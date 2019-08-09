@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="emp-table">
+                <!-- Template for displaying the Current Filter Selection -->
                 <div class="row">
                     <div class="col-12">
                         <div class="filter-class clearfix" [ngClass]="{'active': filterSelected}">
@@ -9,6 +10,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Template to display the Employee data in table format -->
                 <table class="table table-striped">
                     <thead class="table-header">
                         <tr>
@@ -29,6 +32,8 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- Template for the Footer -->
                 <div class="footer">
                     <div class="row">
                         <div class="col offset-3">

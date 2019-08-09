@@ -6,7 +6,6 @@ import { Employee } from './employee.model';
 
 @Injectable({providedIn: "root"})
 export class EmployeeService {
-    private employees: Employee[] = [];
     private _url : string = "/assets/data/employees.json";
     filterSelected = new Subject<number>();
     countersUpdated = new Subject<number[]>();

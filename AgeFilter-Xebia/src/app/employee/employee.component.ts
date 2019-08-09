@@ -10,9 +10,9 @@ import { Employee } from '../services/employee.model';
 export class EmployeeComponent implements OnInit {
   employees: Employee[] = [];
   page: number = 1;
+  ageSorted: boolean = false;
   selectedOption: number = 10;
   filterSelected: number = 0;
-  ageSorted: boolean = false;
   filterString: string[] = ["Below 20yrs","20 to 40yrs","40 to 60yrs","Above 60yrs"];
 
   constructor(private employeeService: EmployeeService) {}
@@ -46,6 +46,6 @@ export class EmployeeComponent implements OnInit {
   }
 
   onFilterSelect(i: number) {
-    this.employeeService.filterSelected.next(0);
+    this.employeeService.filterSelected.next(i);
   }
 }
