@@ -1,5 +1,5 @@
 .emp-table {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
 }
 
 .empImage {
@@ -9,11 +9,12 @@
 }
 
 .filter-class {
-    margin: 20px;
+    margin: 10px;
+    font-size: 14px;
     text-align: center;
-    width: 170px;
-    height: 45px;
-    line-height: 45px;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
     background-color: #cc9966;
     color: #ffffff;
@@ -36,6 +37,11 @@
 
 .table-header {
     background-color: #ecd8c6;
+}
+
+td, th {
+    padding: 0.2rem;
+    vertical-align: middle;
 }
 
 .btn-custom {
