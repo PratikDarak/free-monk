@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../services/employee.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { EmployeeService } from '../services/employee.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit,OnChanges {
+export class HeaderComponent implements OnInit {
   lastFilter: number;
   counter1: number = 0;
   counter2: number = 0;
@@ -17,14 +17,14 @@ export class HeaderComponent implements OnInit,OnChanges {
 
   ngOnInit() {
     this.employeeService.filterSelected
-    .subscribe(data => {
-      this.lastFilter = data;
-    });
-    console.log("NgOnInit");
-    this.counter1 = this.employeeService.counter1;
-    this.counter2 = this.employeeService.counter2;
-    this.counter3 = this.employeeService.counter3;
-    this.counter4 = this.employeeService.counter4;
+      .subscribe(data => {
+        this.lastFilter = data;
+      });
+
+    this.employeeService.countersUpdated
+      .subscribe(data => {
+        [this.counter1,this.counter2,this.counter3,this.counter4] = [...data];
+      });
   }
 
   onFilterSelect(i: number) {
@@ -37,11 +37,4 @@ export class HeaderComponent implements OnInit,OnChanges {
     }
   }
 
-  ngOnChanges() {
-    console.log("NgOnChanges");
-    this.counter1 = this.employeeService.counter1;
-    this.counter2 = this.employeeService.counter2;
-    this.counter3 = this.employeeService.counter3;
-    this.counter4 = this.employeeService.counter4;
-  }
 }
