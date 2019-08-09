@@ -1,0 +1,14 @@
+<div class="container-fluid header">
+    <div class="row">
+        <div class="col-6">
+            <h5><strong>Employee Age</strong></h5>
+            <br>
+            <div class="list-group list-group-horizontal">
+                <a class="list-group-item list-group-item-action" href="#" (click)="onFilterSelect(1)" [ngClass]="{'active': lastFilter === 1}">{{ counter1 }}<br>Below 20yrs</a>
+                <a class="list-group-item list-group-item-action" href="#" (click)="onFilterSelect(2)" [ngClass]="{'active': lastFilter === 2}">{{ counter2 }}<br>20 to 40yrs</a>
+                <a class="list-group-item list-group-item-action" href="#" (click)="onFilterSelect(3)" [ngClass]="{'active': lastFilter === 3}">{{ counter3 }}<br>40 to 60yrs</a>
+                <a class="list-group-item list-group-item-action" href="#" (click)="onFilterSelect(4)" [ngClass]="{'active': lastFilter === 4}">{{ counter4 }}<br>Above 60yrs</a>
+            </div>
+        </div>
+    </div>
+</div>

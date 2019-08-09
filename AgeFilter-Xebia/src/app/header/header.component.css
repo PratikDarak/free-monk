@@ -1,0 +1,25 @@
+.header {
+    padding: 25px 25px 0 25px;
+}
+
+.list-group-item {
+    text-align: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.list-group-item.list-group-item-action:hover {
+    background-color: #ecd8c6;
+}
+
+.active {
+    text-align: center;
+    background-color: #cc9966;
+    color: #ffffff;
+    transform: scale(1.07,1.07);
+    transition: transform 0.5s;
+}
+.list-group-item.list-group-item-action.active:hover {
+    background-color: #cc9966;
+}

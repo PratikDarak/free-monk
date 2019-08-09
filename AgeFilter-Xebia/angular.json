@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "xebia-ageFilter": {
+    "AgeFilter-Xebia": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "sass"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/xebia-ageFilter",
+            "outputPath": "dist/AgeFilter-Xebia",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,7 +25,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -63,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "xebia-ageFilter:build"
+            "browserTarget": "AgeFilter-Xebia:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "xebia-ageFilter:build:production"
+              "browserTarget": "AgeFilter-Xebia:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "xebia-ageFilter:build"
+            "browserTarget": "AgeFilter-Xebia:build"
           }
         },
         "test": {
@@ -89,7 +85,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -111,15 +107,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "xebia-ageFilter:serve"
+            "devServerTarget": "AgeFilter-Xebia:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "xebia-ageFilter:serve:production"
+              "devServerTarget": "AgeFilter-Xebia:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "xebia-ageFilter"
+  "defaultProject": "AgeFilter-Xebia"
 }

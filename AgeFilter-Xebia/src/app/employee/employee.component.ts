@@ -5,7 +5,7 @@ import { Employee } from '../services/employee.model';
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.sass']
+  styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
   employees: Employee[] = [];
@@ -13,6 +13,7 @@ export class EmployeeComponent implements OnInit {
   selectedOption: number = 10;
   filterSelected: number = 0;
   ageSorted: boolean = false;
+  filterString: string[] = ["Below 20yrs","20 to 40yrs","40 to 60yrs","Above 60yrs"];
 
   constructor(private employeeService: EmployeeService) {}
 
@@ -42,5 +43,9 @@ export class EmployeeComponent implements OnInit {
 
   onIdSort() {
     return this.employees.reverse();
+  }
+
+  onFilterSelect(i: number) {
+    this.employeeService.filterSelected.next(0);
   }
 }

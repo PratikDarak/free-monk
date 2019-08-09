@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'xebia-ageFilter'`, () => {
+  it(`should have as title 'AgeFilter-Xebia'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('xebia-ageFilter');
+    expect(app.title).toEqual('AgeFilter-Xebia');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to xebia-ageFilter!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to AgeFilter-Xebia!');
   });
 });
