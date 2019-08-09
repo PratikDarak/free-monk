@@ -1,3 +1,13 @@
+Detailed Instructions on how to run the website:-
+1. Clone the GitHub respository to your local machine using "git clone" command
+2. In command prompt, navigate to the "AgeFilter-Xebia" folder
+3. Run "npm i" command to install the dependencies
+4. Run "ng serve --open" to run the website
+
+Thank you!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
 # AgeFilterXebia
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
