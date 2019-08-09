@@ -1,11 +1,16 @@
 .emp-table {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .empImage {
     width: 30px;
     height: 30px;
     margin-right: 5px;
+}
+
+.sort {
+    width: 20px;
+    height: 20px;
 }
 
 .filter-class {
@@ -26,9 +31,16 @@
 }
 
 .filter-remove {
-    margin-right: 18px;
+    position: absolute;
     cursor: pointer;
     float: right;
+    margin-left: 3px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .table {

@@ -4,18 +4,18 @@
             <div class="emp-table">
                 <div class="row">
                     <div class="col-12">
-                        <div class="filter-class" [ngClass]="{'active': filterSelected}">
-                            <a>{{ filterString[filterSelected-1] }}</a><span class="filter-remove" (click)="onFilterSelect(0)"><img src="../../assets/icons/letter-x.png"></span>
+                        <div class="filter-class clearfix" [ngClass]="{'active': filterSelected}">
+                            <a>{{ filterString[filterSelected-1] }}</a><span class="filter-remove" (click)="onFilterSelect(0)"><img src="../../assets/icons/close.png"></span>
                         </div>
                     </div>
                 </div>
                 <table class="table table-striped">
                     <thead class="table-header">
                         <tr>
-                            <th scope="col" style="cursor: pointer" (click)="onIdSort()">ID<span id="age">&#8597;</span></th>
+                            <th scope="col" style="cursor: pointer" (click)="onIdSort()">ID<span><img class="sort" src="../../assets/icons/sort.png"></span></th>
                             <th scope="col">Employee Name</th>
                             <th scope="col">Description</th>
-                            <th scope="col" style="cursor: pointer" (click)="onAgeSort()">Age<span id="age">&#8597;</span></th>
+                            <th scope="col" style="cursor: pointer" (click)="onAgeSort()">Age<span><img class="sort" src="../../assets/icons/sort.png"></span></th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
