@@ -9,8 +9,8 @@
 }
 
 .sort {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
 }
 
 .filter-class {
@@ -68,4 +68,8 @@ td, th {
 .my-select-box {
     margin-right: 10px;
     padding: 5px;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #cc9966;
 }
